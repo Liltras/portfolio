@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #023E8A, #033E8A, #003685);
+  color: #023E8A;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  text-align: center; /* Centre le texte horizontalement */
+  line-height: 1.6; /* Améliore la lisibilité avec un espacement des lignes */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 100px 100px, 100px 100px;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+nav {
+  background-color: #033E8A;
+  width: 100%;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #FFFFFF;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  padding: 20px; /* Ajoute du padding autour du texte */
+}
+
+section {
+  background-color: rgba(44, 83, 100, 0.8); /* Ajoute un fond semi-transparent */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  max-width: 800px;
+  color: #ffffff; /* Texte plus lumineux */
+} 
+
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #FFFFFF; /* Couleur lumineuse pour les titres */
+}
+
+p {
+  font-size: 18px; /* Augmente légèrement la taille de la police */
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px; /* Ajoute un décalage pour les puces */
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: rgba(44, 83, 100, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: auto;
+  font-size: 14px; /* Texte légèrement plus petit dans le footer */
+  margin-top: auto;
+}
+
+/* Style pour l'image */
+.photo {
+  margin: 20px auto;
+  max-width: 800px; /* Limite la largeur de l'image */
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement */
+}
+
+.photo-img {
+  width: 100%; /* L'image prend la largeur disponible dans son conteneur */
+  max-width: 400px; /* Limite la taille maximale de l'image */
+  border-radius: 0; /* Retire l'arrondi des coins */
+  box-shadow: none; /* Supprime l'ombre autour de l'image */
+  object-fit: cover; /* S'assure que l'image s'adapte sans déformation */
+  border: none; /* Supprime toute bordure */
+}
+
+/* Applique un rectangle bleu autour des textes */
+.text-container {
+  border: 2px solid #023E8A; /* Bordure bleue */
+  border-radius: 10px; /* Arrondi des coins */
+  padding: 10px; /* Ajoute de l'espace à l'intérieur */
+  background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optionnel : ombre */
+  margin: 20px auto; /* Centre le conteneur */
+}
+
+/* Exclure les images de la bordure */
+.text-container img {
+  border: none;
+  box-shadow: none;
+  margin: 0; /* Supprime les marges autour des images */
+  padding: 0;
+  max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
+}

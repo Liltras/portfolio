@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAé - Implémentation des réseaux et protocoles sans fil dédiés à l'IOT</title>
+    <link rel="stylesheet" href="sae.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="alternance.html">À propos</a></li>
+            <li><a href="sae.html">Présentations Projets</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Présentation des SAé réalisés dans le cadre de mon BUT Réseaux et Télécommunications</h1>
+    </header>
+
+    <main>
+        <!-- Introduction sur le terme SAé -->
+        <section class="intro">
+            <p>Dans le cadre de mon BUT en Réseaux et Télécommunications, les <strong>SAÉ</strong> (Situations d'Apprentissage et d'Évaluation) sont des projets pratiques permettant de développer et d'évaluer les compétences acquises au cours de la formation. Ces projets sont conçus pour simuler des situations professionnelles réelles, favorisant ainsi l'apprentissage actif et l'intégration des connaissances théoriques.</p>
+        </section>
+
+        <!-- Section des différents SAé -->
+        <section class="sae-list">
+            <div class="sae-item" onclick="openPopup('sae15')">
+                <img src="saé15.webp" alt="SAé 15">
+                <h3>SAÉ 15 : Défis de Robotique et Algorithmes de Navigation</h3>
+                <p>Dans ce projet, nous avons développé des algorithmes de programmation pour un robot afin qu’il suive un circuit, ajuste sa vitesse en fonction d’un autre véhicule, et évite des obstacles, le tout dans le cadre de défis compétitifs.</p>
+            </div>
+            <div class="sae-item" onclick="openPopup('sae304')">
+                <img src="sae304.jpg" alt="SAé 304">
+                <h3>SAÉ 304 : Installer un serveur Minecraft sur un Raspberry Pi</h3>
+                <p>Dans ce projet, nous avons installé un serveur Minecraft sur un Raspberry Pi, en utilisant une infrastructure IOM et des capteurs connectés pour améliorer l'expérience de jeu.</p>
+            </div>
+            <div class="sae-item" onclick="openPopup('sae401')">
+                <img src="sae401.png" alt="SAé 401">
+                <h3>SAÉ 401 : Réseaux sans fil pour l'IoT</h3>
+                <p>Ce projet a porté sur sécurisations d'un data center grâce à un réseaux sans fil.</p>
+            </div>
+            <div class="sae-item" onclick="openPopup('sae503')">
+                <img src="sae503.png" alt="SAé 503">
+                <h3>SAÉ 503 : Simulation CESIM - Gestion de part de marché dans la vente de téléphones</h3>
+                <p>Ce projet consistait à réaliser une simulation CESIM où nous avons dû gérer la part de marché de notre entreprise sur le marché de la vente de téléphones mobiles. L'objectif était de prendre des décisions stratégiques pour accroître notre part de marché dans un environnement compétitif.</p>
+            </div>
+        </section>
+
+        <!-- Popups pour afficher les détails de chaque SAé -->
+        <div id="sae15" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('sae15')">&times;</span>
+                <div class="popup-header">
+                    <img src="saé15.webp" alt="SAé 15">
+                </div>
+                <h2>SAÉ 15 : Défis de Robotique et Algorithmes de Navigation</h2>
+                <p>Dans ce projet, nous avons utilisé des classes de base pour contrôler un robot et le faire se déplacer de manière autonome dans différents environnements.<br>L’objectif principal était de relever plusieurs défis de robotique, tels que :<br></p>
+                <ul>
+                    <li>Réalisation de trois tours de circuit avec suivi de ligne et gestion des couleurs de la LED.</li>
+                    <li>Développement d'un régulateur de vitesse pour suivre un autre véhicule tout en évitant les collisions.</li>
+                    <li>Résolution d’un problème de labyrinthe, avec des montagnes et des falaises, pour faire sortir le robot sans le faire tomber dans la falaise ni heurter les murs.</li>
+                </ul>
+                <p>Le projet a été réalisé à travers plusieurs étapes, avec une attention particulière portée à la clarté et à l'efficacité du code pour résoudre chaque challenge de manière optimale.</p>
+                <p>Voici une petite vidéo de notre robot faisant un parcour:</p>
+                <div class="popup-footer">
+                    <img class="media" src="sae15.png" alt="SAé 15">
+                </div>
+            </div>
+        </div>
+        <div id="sae304" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('sae304')">&times;</span>
+                <div class="popup-header">
+                    <img src="sae304.jpg" alt="SAé 304">
+                </div>
+                <h2>SAÉ 304 : Installer un serveur Minecraft sur un Raspberry Pi</h2>
+                <p>Dans ce projet, nous avons installé un serveur Minecraft sur un Raspberry Pi, en utilisant une infrastructure IOM et des capteurs connectés pour améliorer l'expérience de jeu.</p>
+                <p>Ce projet est centré sur la création d'un environnement de jeu avec des superpouvoirs et des interactions physiques grâce aux gants connectés.</p>
+                <p>Nous avons utilisé différentes technologies pour implémenter une solution IoT, avec des capteurs et des dispositifs intégrés pour enrichir l'expérience de jeu et permettre une interaction physique dans le monde Minecraft.</p>
+                <p>Voici une image d'un des superpouvoirs que le gant ajoute au jeu:</p>
+                <div class="popup-footer">
+                    <img class="media" src="saé304.png" alt="SAé 15">
+                </div>
+            </div>
+        </div>
+        <div id="sae401" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('sae401')">&times;</span>
+                <div class="popup-header">
+                    <img src="sae401.png" alt="SAé 401">
+                </div>
+                <h2>SAÉ 401 : Réseaux sans fil pour l'IoT</h2>
+                <p>Ce projet a porté sur sécurisations d'un data center via plusieurs capteur et accès par badge</p>
+                <p>Voici les principaux points abordés :</p>
+                <ul>
+                    <li>Capteurs de température, capteurs de CO2</li>
+                    <li>Catpeurs de mouvements, caméras</li>
+                    <li>Accès par badge RFID</li>
+                </ul>
+                <p>Nous avons exploré les modules associés et les compétences ciblées pour mieux comprendre et mettre en œuvre les réseaux sans fil pour l'IoT, notamment en tenant compte des compromis associés.</p>
+                <p>Voici une petite vidéo du fonctionnement du capteur RFID:</p>
+                <div class="popup-footer">
+                    <video width="320" height="240" controls>
+                        <source src="saé401.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div id="sae503" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('sae503')">&times;</span>
+                <div class="popup-header">
+                    <img src="sae503.png" alt="SAé 503">
+                </div>
+                <h2>SAÉ 503 : Simulation CESIM - Gestion de part de marché dans la vente de téléphones</h2>
+                <p>Ce projet a consisté à réaliser une simulation CESIM, où nous avons dû gérer la part de marché de notre entreprise sur le marché de la vente de téléphones mobiles en ligne. L'objectif était de prendre des décisions stratégiques pour accroître notre part de marché dans un environnement très compétitif.</p>
+                <p>La simulation CESIM permet de simuler un marché dynamique avec des acteurs variés, et chaque équipe devait ajuster ses stratégies de marketing, de production, et de distribution afin de maximiser les ventes et la rentabilité. Nous avons dû analyser les données du marché et prendre des décisions cruciales pour devancer nos concurrents.</p>
+                <p>Voici une image des parts du marché avec toutes les entreprise de la simulation dont la notre qui est "LCM":</p>
+                <div class="popup-footer">
+                    <img class="media" src="saé503.png" alt="SAé 15">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PRINZBACH Lilian</p>
+    </footer>
+
+    <script>
+        function openPopup(saeId) {
+            document.getElementById(saeId).style.display = 'block';
+        }
+        function closePopup(saeId) {
+            document.getElementById(saeId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #023E8A, #033E8A, #003685);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px, 100px 100px, 100px 100px;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Navigation */
+nav {
+    background-color: #033E8A;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+nav .logo {
+    /* Ajoute une image ou un texte ici si nécessaire */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #f1f1f1;
+}
+
+/* Conteneur de la section CV */
+.cv-container {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 20px;
+    background-color: rgba(44, 83, 100, 0.9); /* Fond semi-transparent */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #00B4D8, #0096C7, #0077B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-flow 3s infinite;
+    margin-bottom: 40px;
+}
+
+@keyframes gradient-flow {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFA500;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #FFA500;
+}
+
+/* Section image */
+.image-section {
+    margin-top: 40px;
+}
+
+.cv-image {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pied de page */
+footer {
+    background-color: rgba(44, 83, 100, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    font-size: 14px;
+}

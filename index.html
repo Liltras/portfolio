@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Acceuil</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="alternance.html">À propos</a></li>
+                <li><a href="sae.html">Présentations Projets</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="carousel-text">
+            <h2>Bienvenue sur mon site web !</h2>
+            <p>Je suis actuellement en 3ème et dernière année de mon BUT Réseaux et Télécommunications, avec une spécialisation en <strong>Internets des Objets à Mobilités (IOM)</strong>. Depuis le début de ma 2ème année, je suis en alternance chez <strong>Systancia</strong>, où je mets en pratique les compétences acquises au fil des années. Ce site est un moyen pour vous de découvrir mes projets, mes réalisations et mon parcours professionnel.</p>
+            <p>N'hésitez pas à explorer les différentes sections et à cliquer sur les images du carrousel pour accéder directement aux pages dédiées.</p>
+        </div>
+        
+        <div class="carousel">
+            <div class="cube">
+                <div class="side front">
+                    <a href="sae.html"><img src="projets" alt="Image 1"></a>
+                </div>
+                <div class="side right">
+                    <a href="alternance.html"><img src="cyberelements" alt="Image 2"></a>
+                </div>
+                <div class="side back">
+                    <a href="cv.html"><img src="CV.png" alt="Image 3"></a>
+                </div>
+                <div class="side left">
+                    <a href="contact.html"><img src="contact.webp" alt="Image 4"></a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 PRINZBACH Lilian</p>
+        </footer>
+
+        <!-- Bouton "new" -->
+        <button id="openPopup" class="popup-button">New</button>
+
+        <!-- Fenêtre Pop-up -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopup" class="close-btn">&times;</span>
+                <img src="actualités.jpg" alt="Image pop-up" class="popup-image">
+                <div class="popup-text">
+                    <h2>Visite à Télécom Paris : Une immersion dans l'univers d'une grande école d'ingénieurs</h2>
+                    <p>Avec ma promotion de 3ᵉ année du BUT Réseau et Télécommunication de l'Université Nord Franche-Comté, nous avons eu le privilège de visiter l'école d'ingénieurs Télécom Paris, un lieu emblématique reconnue pour son excellence dans les sciences et technologies de l'information et des télécommunications où l'innovation, l'excellence académique et les technologies de demain se rencontrent.</p>
+                    <p>Cette journée nous a permis de découvrir le parcours d'un ingénieur au sein d'une grande école, avec des échanges enrichissants avec les enseignants et les étudiants ainsi qu'une visite de leurs infrastructures modernes.</p>
+                    <p>Une occasion unique d'approfondir nos connaissances et de discuter des enjeux technologiques futurs. 💡</p>
+                    <p>Ce fut une journée pleine de découvertes : des échanges inspirants avec les enseignants et les étudiants, une immersion dans leurs projets de recherche, ainsi qu'une visite des infrastructures modernes de l'école.</p>
+                    <p>Un grand merci à toute l'équipe de Télécom Paris pour avoir partagé leur vision et leur savoir-faire.</p>
+                    <p>Cette visite nous a permis de nous faire une idée des futures études que nous pourrions poursuivre, avec des échanges inspirants avec les enseignants et les étudiants, une immersion dans leurs projets de recherche, ainsi qu'une visite des infrastructures modernes de l'école.</p>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Récupérer les éléments
+            const popup = document.getElementById('popup');
+            const openPopupButton = document.getElementById('openPopup');
+            const closePopupButton = document.getElementById('closePopup');
+
+            // Ouvrir la fenêtre modale
+            openPopupButton.addEventListener('click', () => {
+                popup.style.display = 'flex';
+            });
+
+            // Fermer la fenêtre modale
+            closePopupButton.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+
+            // Fermer la fenêtre modale si l'utilisateur clique en dehors du contenu
+            window.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #023E8A, #033E8A, #003685);
+    color: #023E8A;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px, 100px 100px, 100px 100px;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+nav {
+    background-color: #033E8A;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+  
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+nav ul li {
+    margin: 0 20px;
+}
+  
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+  
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: rgba(44, 83, 100, 1); /* Cadre autour du texte */
+    border: 2px solid #023E8A; /* Bordure du cadre */
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis du cadre */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre autour du cadre */
+}
+
+.sae-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.sae-item {
+    width: 45%; /* Réduit la taille des éléments de la liste */
+    text-align: center;
+    background-color: rgba(44, 83, 100, 1); /* Moins transparent */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Ajoute un espacement entre les lignes */
+    padding: 10px; /* Ajoute du padding autour des éléments */
+}
+
+.sae-item:hover {
+    transform: scale(1.05);
+}
+
+.sae-item img {
+    width: 100%; /* Les images prennent toute la largeur du parent */
+    max-width: 200px; /* Limite la taille des images à une largeur de 200px */
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px; /* Ajoute un espacement sous les images */
+}
+
+/* Cibler spécifiquement les images de SA2 et SA4 pour les agrandir */
+.sae-item:nth-child(2) img, /* SA2 */
+.sae-item:nth-child(4) img { /* SA4 */
+    max-width: 300px; /* Agrandir l'image des SA2 et SA4 */
+}
+
+/* Agrandir les images dans les pop-ups pour SA2 et SA4 */
+.popup-header img {
+    width: 100%;
+    max-width: 200px; /* Limite la taille des images dans les pop-ups à 200px */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Cibler spécifiquement les images de SA2 et SA4 dans les pop-ups */
+#sae304 .popup-header img, /* SA2 */
+#sae503 .popup-header img { /* SA4 */
+    max-width: 300px; /* Agrandir les images dans les pop-ups */
+}
+
+.sae-item h3 {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px;
+    background-color: rgba(44, 83, 100, 1); /* Moins transparent */
+    border-radius: 0 0 10px 10px;
+}
+
+.sae-item p {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 10px 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer la pop-up à l'écran */
+    width: 60%;
+    max-width: 600px;
+    background-color: rgba(44, 83, 100, 1); /* Moins transparent, opacité de 1 */
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-header {
+    margin-bottom: 20px;
+}
+
+.popup-header img {
+    width: 100%;
+    max-width: 200px; /* Limite la taille des images dans les pop-ups à 200px */
+    height: auto;
+    border-radius: 10px;
+}
+
+.popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.popup-footer .media {
+    width: 320px; /* Largeur fixe pour toutes les images et vidéos */
+    height: 240px; /* Hauteur fixe pour toutes les images et vidéos */
+    object-fit: cover; /* Cela permet de couvrir entièrement le conteneur sans déformation */
+    border-radius: 10px; /* Ajoute des bords arrondis pour les images et vidéos */
+}
+
+footer {
+    background-color: rgba(44, 83, 100, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+    font-size: 14px; /* Texte légèrement plus petit dans le footer */
+    margin-top: auto;
+  }
+
+/* Si vous souhaitez aussi ajouter un fond sombre derrière les pop-ups */
+.popup-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 60% opaque */
+    z-index: 999;
+}
